@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PI Planning – capacité UX / UI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="title">
+      <div class="pinav" id="piNav"></div>
+      <input id="piName" type="text" aria-label="Nom du PI" data-c="root" data-f="piName">
+      <div class="sub" id="piSub"></div>
+    </div>
+    <div>
+      <div class="kpis" id="kpis"></div>
+      <div class="savestate" id="saveState" aria-live="polite"></div>
+    </div>
+  </header>
+
+  <nav class="tabs" role="tablist" id="tabs">
+    <button role="tab" data-tab="plan">Plan</button>
+    <button role="tab" data-tab="planning">Planning</button>
+    <button role="tab" data-tab="sprints">Sprints</button>
+    <button role="tab" data-tab="team">Équipe, congés et évènements</button>
+    <button role="tab" data-tab="subjects">Sujets</button>
+  </nav>
+
+  <section class="panel" id="p-plan"></section>
+  <section class="panel" id="p-planning"></section>
+  <section class="panel" id="p-sprints"></section>
+  <section class="panel" id="p-team"></section>
+  <section class="panel" id="p-subjects"></section>
+</div>
+
+<div id="rp" hidden role="dialog" aria-label="Choisir les dates"></div>
+<dialog id="newDlg" aria-labelledby="newDlgT"></dialog>
+<input type="file" id="importFile" accept=".json,application/json" hidden>
+<script src="app.js"></script>
+</body>
+</html>
